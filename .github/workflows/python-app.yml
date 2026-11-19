@@ -30,8 +30,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: 
       run: |
-        command 1: ruff linter
-        command 2: ruff formatter
+        ruff linter
+        ruff formatter
         mypy .
     - name: Test with pytest
       run: |
